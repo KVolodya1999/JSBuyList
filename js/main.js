@@ -94,6 +94,14 @@ $(function(){
         ($('.input')).focus();
     });
 
+    $('.input').keydown(function () {
+        if(event.keyCode==13) {
+            addItem(($('.input')).val());
+            ($('.input')).val("");
+            ($('.input')).focus();
+        }
+    });
+
     addItem("Огірки");
     addItem("Картопля");
     addItem("Цибуля");
